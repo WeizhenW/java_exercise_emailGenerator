@@ -11,6 +11,8 @@ public class EmailApp {
         //prints
         System.out.println("email address is: " + email.getEmail());
         System.out.println("password is: " + email.getPassword());
+
+        email.updatePassword("updatedpassword");
     }
 
 }

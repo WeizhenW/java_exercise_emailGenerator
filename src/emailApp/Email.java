@@ -21,7 +21,6 @@ public class Email {
     }
 
     //getters
-
     public String getFirstName() {
         return firstName;
     }
@@ -55,6 +54,12 @@ public class Email {
         }
         //convert char[] to String
         return String.valueOf(initialPassword);
+    }
+
+    //method to update password
+    public void updatePassword(String newPassword) {
+        this.password = newPassword;
+        System.out.println("new password is: " + this.password);
     }
 
 
