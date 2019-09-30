@@ -3,16 +3,19 @@ package bankaccountApp;
 //create abstract class - no object will be created on this class
 public abstract class Account implements IBaseRate {
     //basic properties
-    String name;
-    String accountType;
-    int initialDeposit;
-    int accountBalance;
+    String name = "peppa pig";
+    String sSN;
+
+    double accountBalance;
     int accountNumber;
-    float interestRate;
+    double interestRate;
 
     //constructor at abstract class - take in common properties
-    public Account(String name) {
-        System.out.println("New account name: " + name);
+    public Account(String name, String sSN, double initialDeposit) {
+        this.name = name;
+        this.sSN = sSN;
+        this.accountBalance = initialDeposit;
+        System.out.println("New account name: " + this.name + "\nSSN is " + this.sSN + "\nbalance is $" + accountBalance);
 
     }
 
@@ -20,13 +23,13 @@ public abstract class Account implements IBaseRate {
     public int setAccountNumber() {
         return accountNumber;
     }
-    public int deposit(int amount) {
+    public double deposit(int amount) {
         accountBalance += amount;
         return accountBalance;
 
     }
 
-    public int withdraw(int amount) {
+    public double withdraw(int amount) {
         accountBalance -= amount;
         return accountBalance;
     }
