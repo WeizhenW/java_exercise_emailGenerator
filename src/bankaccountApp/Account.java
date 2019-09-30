@@ -18,19 +18,18 @@ public abstract class Account implements IBaseRate {
         this.name = name;
         this.sSN = sSN;
         this.accountBalance = initialDeposit;
-        System.out.println("New account name: " + this.name
-                + "\nSSN is " + this.sSN
-                + "\nbalance is $" + accountBalance);
+//        System.out.println("New account name: " + this.name
+//                + "\nSSN is " + this.sSN
+//                + "\nbalance is $" + accountBalance);
 
         //set account number
         index ++;
         this.accountNumber = setAccountNumber();
-        System.out.println("account number: " + this.accountNumber);
 
     }
 
     //basic methods
-    public String setAccountNumber() {
+    private String setAccountNumber() {
         //get last two digits of ssn
         String lastTwoOfSSN = sSN.substring(sSN.length()-2);
         //get 5 digits unique sequential number
@@ -55,8 +54,12 @@ public abstract class Account implements IBaseRate {
 
     }
 
-    public String showInfo() {
-        return "Account balance is " + accountBalance;
+    public void showInfo() {
+        System.out.println(
+                "Name: " + name +
+                "\nAccount Number: " + accountNumber +
+                "\nBalance: " + accountBalance
+                );
     }
 
 
