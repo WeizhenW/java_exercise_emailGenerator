@@ -44,15 +44,14 @@ public abstract class Account implements IBaseRate {
         return lastTwoOfSSN + uniqueID + randomNumber;
     }
 
-    public double deposit(int amount) {
+    //deposit method
+    public void deposit(int amount) {
         accountBalance += amount;
-        return accountBalance;
 
     }
 
-    public double withdraw(int amount) {
+    public void withdraw(int amount) {
         accountBalance -= amount;
-        return accountBalance;
     }
 
     public void transfer() {

@@ -12,11 +12,20 @@ public class BankAccountApp {
 
         check1.showInfo();
         System.out.println("***************************");
-        check2.showInfo();
+        check1.deposit(100);
+        check1.showInfo();
+        System.out.println("***************************");
+        check1.withdraw(111);
+        check1.showInfo();
         System.out.println("***************************");
         saving1.showInfo();
         System.out.println("***************************");
-        saving2.showInfo();
+        saving1.deposit(222);
+        saving1.showInfo();
+        System.out.println("***************************");
+        saving1.withdraw(333);
+        saving1.showInfo();
+
 
     }
 }
