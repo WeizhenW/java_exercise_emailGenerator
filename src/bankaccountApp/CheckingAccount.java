@@ -6,8 +6,10 @@ public class CheckingAccount extends Account {
     int pin;
 
     //constructor to initialize checkingAccount
-    public CheckingAccount() {
-        System.out.println("new checking account");
+    public CheckingAccount(String name) {
+        //must use super in case of extending from parent class
+        super(name);
+        System.out.println("It's a checking account");
     }
     //any specific methods
 }

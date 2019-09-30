@@ -10,13 +10,11 @@ public abstract class Account implements IBaseRate {
     int accountNumber;
     float interestRate;
 
-    //constructor
-//    public Account(String name, String accountType, int initialDeposit) {
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.accountType = accountType;
-//        this.accountBalance = initialDeposit;
-//    }
+    //constructor at abstract class - take in common properties
+    public Account(String name) {
+        System.out.println("New account name: " + name);
+
+    }
 
     //basic methods
     public int setAccountNumber() {
