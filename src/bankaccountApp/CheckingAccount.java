@@ -2,22 +2,31 @@ package bankaccountApp;
 
 public class CheckingAccount extends Account {
     //specific properties
-    int cardNumber;
+    long cardNumber;
     int cardPIN;
 
     //constructor to initialize checkingAccount
     public CheckingAccount(String name, String sSN, double initialDeposit) {
         //must use super in case of extending from parent class
         super(name, sSN, initialDeposit);
-        accountNumber = "2" + accountNumber;
-//        System.out.println("It's a checking account");
-//        System.out.println("account number: " + this.accountNumber);
+
+        setDebitCard();
+
     }
 
     //any specific methods
-    public void showInfo() {
+    private void setDebitCard() {
+        cardNumber = (long) (Math.random() * Math.pow(10, 12));
+        cardPIN = (int) (Math.random() * Math.pow(10, 4));
+    }
+
+        public void showInfo() {
+
         //not overwriting
         super.showInfo();
         System.out.println("Checking account");
+        System.out.println(
+                "Card number: " + cardNumber +
+                "\nPIN: " + cardPIN);
     }
 }

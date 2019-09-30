@@ -25,7 +25,8 @@ public class SavingAccount extends Account {
     public void showInfo() {
         System.out.println("Saving account");
         super.showInfo();
-        System.out.println("safety box id is " + safetyBoxId + " safety box code is " + safetyBoxCode);
+        System.out.println(
+                "safety box id is " + safetyBoxId + "\nsafety box code is " + safetyBoxCode);
     }
 
 }

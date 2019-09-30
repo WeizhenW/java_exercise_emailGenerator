@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2866cd1f-b06b-4042-a0f0-3d83df66f51e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_exercise_projects/bankaccountApp/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_exercise_projects/bankaccountApp/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_exercise_projects/bankaccountApp/BankAccountApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_exercise_projects/bankaccountApp/BankAccountApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/java_exercise_projects/bankaccountApp/CheckingAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_exercise_projects/bankaccountApp/CheckingAccount.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/java_exercise_projects/bankaccountApp/SavingAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_exercise_projects/bankaccountApp/SavingAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankaccountApp/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankaccountApp/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankaccountApp/BankAccountApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankaccountApp/BankAccountApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bankaccountApp/CheckingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankaccountApp/CheckingAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bankaccountApp/SavingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankaccountApp/SavingAccount.java" afterDir="false" />
     </list>
@@ -96,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569601925744</updated>
       <workItem from="1569601927273" duration="4978000" />
-      <workItem from="1569617079268" duration="8175000" />
+      <workItem from="1569617079268" duration="9086000" />
     </task>
     <servers />
   </component>
