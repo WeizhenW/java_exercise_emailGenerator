@@ -11,6 +11,7 @@ public abstract class Account implements IBaseRate {
     //5 digits unique sequential number
     static int index = 10000;
     String accountNumber;
+
     double interestRate;
 
     //constructor at abstract class - take in common properties
@@ -18,17 +19,20 @@ public abstract class Account implements IBaseRate {
         this.name = name;
         this.sSN = sSN;
         this.accountBalance = initialDeposit;
-//        System.out.println("New account name: " + this.name
-//                + "\nSSN is " + this.sSN
-//                + "\nbalance is $" + accountBalance);
 
         //set account number
         index ++;
         this.accountNumber = setAccountNumber();
-
+        //set rate
+        setRate();
     }
 
     //basic methods
+
+    //forcing the implementation of the abstract method
+    abstract void setRate();
+
+    //setAccountNumber method
     private String setAccountNumber() {
         //get last two digits of ssn
         String lastTwoOfSSN = sSN.substring(sSN.length()-2);
@@ -39,6 +43,7 @@ public abstract class Account implements IBaseRate {
         int randomNumber = (int) (Math.random()*1000);
         return lastTwoOfSSN + uniqueID + randomNumber;
     }
+
     public double deposit(int amount) {
         accountBalance += amount;
         return accountBalance;

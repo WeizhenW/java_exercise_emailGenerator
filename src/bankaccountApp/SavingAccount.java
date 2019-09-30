@@ -18,6 +18,10 @@ public class SavingAccount extends Account {
 
     }
     //any specific methods
+    @Override
+    void setRate() {
+        interestRate = getRate() - 0.25;
+    }
     private void setSafetyBox() {
         this.safetyBoxId = safetyBoxIndex;
         this.safetyBoxCode = (int) (Math.random() * Math.pow(10, 4));
@@ -25,8 +29,9 @@ public class SavingAccount extends Account {
     public void showInfo() {
         System.out.println("Saving account");
         super.showInfo();
-        System.out.println(
-                "safety box id is " + safetyBoxId + "\nsafety box code is " + safetyBoxCode);
+        System.out.println("safety box id is " + safetyBoxId +
+                "\nsafety box code is " + safetyBoxCode +
+                "\nInterest rate is " + interestRate);
     }
 
 }

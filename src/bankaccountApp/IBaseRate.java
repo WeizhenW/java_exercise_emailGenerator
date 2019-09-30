@@ -4,4 +4,8 @@ package bankaccountApp;
 public interface IBaseRate {
 
     //method to return base rate
+    default double getRate() {
+        return 2.5;
+    }
+
 }
