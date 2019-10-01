@@ -1,31 +1,40 @@
 package bankaccountApp;
 
+import utilities.CSV;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class BankAccountApp {
-    public static void main(String[] args) {
 
-        CheckingAccount check1 = new CheckingAccount("big bear", "112233", 100);
-        CheckingAccount check2 = new CheckingAccount("small bear", "445566", 200);
+    public static void main(String[] args) throws FileNotFoundException {
 
-        SavingAccount saving1 = new SavingAccount("teddy ted", "998877", 999);
-        SavingAccount saving2 = new SavingAccount("sheep suzi", "665544", 222);
+        List<Account> accountsList = new LinkedList<>();
 
+        String fileName = "C:\\Users\\weizhen.wang\\Downloads\\NewBankAccounts.csv";
 
-        check1.showInfo();
-        System.out.println("***************************");
-        check1.deposit(100);
-        check1.showInfo();
-        System.out.println("***************************");
-        check1.withdraw(111);
-        check1.showInfo();
-        System.out.println("***************************");
-        saving1.showInfo();
-        System.out.println("***************************");
-        saving1.deposit(222);
-        saving1.showInfo();
-        System.out.println("***************************");
-        saving1.withdraw(333);
-        saving1.showInfo();
+        List<String[]> allAccounts = CSV.readCSV(fileName);
 
+        for(String[] account : allAccounts) {
+            String name = account[0];
+            String sSN = account[1];
+            String accountType = account[2];
+            double initialDeposit = Double.parseDouble(account[3]);
+
+            if(accountType.equals("Savings")) {
+                accountsList.add(new SavingAccount(name, sSN, initialDeposit));
+            } else if (accountType.equals("Checking")) {
+                accountsList.add(new CheckingAccount(name, sSN, initialDeposit));
+            } else {
+                System.out.println("Error with reading file");
+            }
+        }
+
+        for(Account account : accountsList) {
+            System.out.println(account.name + " " + account.accountNumber + " " + account.accountBalance);
+        }
 
     }
 }
